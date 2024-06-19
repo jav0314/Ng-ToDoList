@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { appSettings } from '../../../Settings/app-settings';
-import { Users } from '../../interface/userDetail.interface';
 
 @Component({
   selector: 'app-sing-up',
