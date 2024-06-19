@@ -1,26 +1,33 @@
-<div
-  class="form-control w-25 position-absolute start-50 top-50 translate-middle"
->
-  <form>
-    <div>
-      <h1>Log-In</h1>
-    </div>
-    <div>
-      <label for="username">Username: </label>
-      <input type="text" id="username" class="form-control" />
-    </div>
-    <div>
-      <label for="passuser">Password: </label>
-      <input type="password" id="passuser" class="form-control" />
-    </div>
-    <div>
+<div class="container">
+  <h2>Buscar Usuario por ID</h2>
+  <form (ngSubmit)="buscarUsuario()">
+    <div class="form-group">
+      <label for="userId">ID de Usuario:</label>
       <input
-        type="button"
-        (click)="LogIn()"
-        value="Sing-In"
-        class="btn btn-success mt-2"
+        type="text"
+        class="form-control"
+        id="userId"
+        name="userId"
+        [(ngModel)]="userId"
+        required
       />
     </div>
-    <p>{{ mensajeUser }}{{ mensajePass }}</p>
+    <button type="submit" class="btn btn-primary">Buscar</button>
   </form>
+
+  <div *ngIf="usuarioEncontrado">
+    <h2>Datos del Usuario</h2>
+    <p><strong>ID:</strong> {{ usuarioEncontrado.id }}</p>
+    <p>
+      <strong>Nombre:</strong> {{ usuarioEncontrado.firstName }}
+      {{ usuarioEncontrado.lastName }}
+    </p>
+    <p><strong>Email:</strong> {{ usuarioEncontrado.email }}</p>
+    <p><strong>Teléfono:</strong> {{ usuarioEncontrado.phone }}</p>
+    <p><strong>Nacionalidad:</strong> {{ usuarioEncontrado.nationality }}</p>
+    <!-- Mostrar otros datos según sea necesario -->
+  </div>
+  <div *ngIf="!usuarioEncontrado && userId !== ''">
+    <p>No se encontró ningún usuario con el ID {{ userId }}</p>
+  </div>
 </div>
