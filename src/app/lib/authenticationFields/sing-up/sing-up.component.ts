@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
+import { appSettings } from '../../../Settings/app-settings';
+import { Users } from '../../interface/userDetail.interface';
 
 @Component({
   selector: 'app-sing-up',
@@ -14,5 +17,11 @@ export class SingUpComponent {
   password: string = '';
   passwordConfirm: string = '';
 
-  SingUp() {}
+  private https = inject(HttpClient);
+  private urlApi: string = appSettings.apiUrl + '/Users';
+
+  constructor(private http: HttpClient) {}
+  SingUp() {
+    // return this.http.post<Users>(this.urlApi);
+  }
 }
