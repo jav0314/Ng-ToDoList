@@ -13,15 +13,18 @@ export class LogInComponent {
   constructor(public service: LogInService) {}
   buscarUsuario() {
     if (this.userId.trim() !== '') {
-      this.service.getById(parseInt(this.userId, 10)).subscribe(
-        (usuario: LogIn) => {
+      const observer = {
+        next: (usuario: LogIn) => {
+          console.log(usuario);
           this.usuarioEncontrado = usuario;
         },
-        (error) => {
+        error: (error: any) => {
           console.error('Error al buscar usuario:', error);
           this.usuarioEncontrado = undefined;
-        }
-      );
+        },
+      };
+
+      this.service.getById(parseInt(this.userId, 10)).subscribe(observer);
     }
   }
 }

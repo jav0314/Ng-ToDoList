@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
+import { SingUp } from './sing-up.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SingUpService {
+  urlApi: string = `${environment.apiBaseUrl}/Countries`;
+  list: SingUp[] = [];
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  usersPost(users: SingUp): Observable<SingUp> {
+    return this.http.post<SingUp>(this.urlApi, users);
+  }
 }

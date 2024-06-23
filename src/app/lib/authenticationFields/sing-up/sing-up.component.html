@@ -9,42 +9,105 @@
       <div class="col-md-6">
         <div class="mt-2">
           <label for="name">First Name: </label>
-          <input type="text" id="name" class="form-control" />
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="user.firstName"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="middleName">Middle Name: </label>
-          <input type="text" id="middleName" class="form-control" />
+          <input
+            type="text"
+            id="middleName"
+            [(ngModel)]="user.middleName"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="lastName">Last Name: </label>
-          <input type="text" id="lastName" class="form-control" />
+          <input
+            type="text"
+            id="lastName"
+            [(ngModel)]="user.lastName"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="birth">Date Birth: </label>
-          <input type="date" id="birth" class="form-control" />
+          <input
+            type="date"
+            id="birth"
+            [(ngModel)]="user.dateBirth"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="email">Email: </label>
-          <input type="email" id="email" class="form-control" />
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="user.email"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="mt-2">
           <label for="phone">Phone Number: </label>
-          <input type="number" id="phone" class="form-control" />
+          <input
+            type="number"
+            id="phone"
+            [(ngModel)]="user.phone"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="username">Username: </label>
-          <input type="text" id="username" class="form-control" />
+          <input
+            type="text"
+            id="username"
+            [(ngModel)]="user.userName"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="nationality">Nationality: </label>
-          <input type="text" id="nationality" class="form-control" />
+          <input
+            type="text"
+            id="nationality"
+            [(ngModel)]="user.nationality"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="password">Password: </label>
-          <input type="password" id="password" class="form-control" />
+          <input
+            type="password"
+            id="password"
+            [(ngModel)]="user.password"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+            appUpperCase
+          />
         </div>
         <div class="mt-2">
           <label for="passConfirm">Confirm Password: </label>
