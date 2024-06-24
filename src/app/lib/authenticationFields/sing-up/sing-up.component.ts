@@ -12,7 +12,6 @@ import { SingUp } from '../../../shared/autenticationField/sing-up.model';
 export class SingUpComponent {
   user: SingUp = {
     Cod: 0,
-    id: '',
     firstName: '',
     middleName: '',
     lastName: '',
@@ -26,10 +25,12 @@ export class SingUpComponent {
   confirmPass: string = '';
   constructor(public service: SingUpService) {}
   SingUp() {
+    console.log('entre en funcion');
     if (this.confirmPass != this.user.password) {
       alert('Password is not equal');
       return;
     }
+    console.log(this.user);
     const observer = {
       next: (user: SingUp) => {
         console.log('Success');

@@ -1,6 +1,5 @@
 export class SingUp {
   Cod: number = 0;
-  id: string = '';
   firstName: string = '';
   middleName: string = '';
   lastName: string = '';

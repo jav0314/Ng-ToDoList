@@ -74,6 +74,7 @@
             [ngModelOptions]="{ standalone: true }"
             class="form-control"
             appUpperCase
+            appNumbersOnly
           />
         </div>
         <div class="mt-2">
@@ -111,14 +112,20 @@
         </div>
         <div class="mt-2">
           <label for="passConfirm">Confirm Password: </label>
-          <input type="password" id="passConfirm" class="form-control" />
+          <input
+            type="password"
+            id="passConfirm"
+            [(ngModel)]="confirmPass"
+            [ngModelOptions]="{ standalone: true }"
+            class="form-control"
+          />
         </div>
       </div>
     </div>
     <div>
       <input
         type="button"
-        onclick="SignUp()"
+        (click)="SingUp()"
         value="SignUp"
         class="btn btn-primary mt-3"
       />

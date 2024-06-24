@@ -7,9 +7,16 @@ import { LogInComponent } from './lib/authenticationFields/log-in/log-in.compone
 import { SingUpComponent } from './lib/authenticationFields/sing-up/sing-up.component';
 import { FormsModule } from '@angular/forms';
 import { UpperCaseDirective } from './directives/upper/upper-case.directive';
+import { NumbersOnlyDirective } from './directives/numbersOnly/numbers-only.directive';
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, SingUpComponent, UpperCaseDirective],
+  declarations: [
+    AppComponent,
+    LogInComponent,
+    SingUpComponent,
+    UpperCaseDirective,
+    NumbersOnlyDirective,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
