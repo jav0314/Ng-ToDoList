@@ -3,6 +3,7 @@ export class SingUp {
   firstName: string = '';
   middleName: string = '';
   lastName: string = '';
+  secondSurname: string = '';
   dateBirth: string = '';
   email: string = '';
   phone: string = '';
