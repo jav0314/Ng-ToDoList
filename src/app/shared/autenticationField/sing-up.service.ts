@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class SingUpService {
-  urlApi: string = `${environment.apiBaseUrl}/Countries`;
+  urlApi: string = `${environment.apiBaseUrl}/Users`;
   list: SingUp[] = [];
   constructor(private http: HttpClient) {}
 
